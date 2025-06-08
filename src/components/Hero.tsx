@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowDown, ArrowLeft, ArrowRight, Github, Linkedin, Mail, Instagram, Facebook, XIcon } from 'lucide-react';
 import Hero3D from './Hero3D';
 import RotatingText from './RotatingText';
 
@@ -43,8 +43,8 @@ const Hero = () => {
             className="space-y-4"
           >
             <div className="inline-block">
-              <span className="text-sm font-medium text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20">
-                👋 Welcome to my portfolio
+              <span className="text-sm font-medium text-primary bg-primary/10 px-4 py-2 rounded-full border border-primary/20 hover:bg-primary/20 hover:scale-105 hover:shadow-lg transition-all duration-300 cursor-default group">
+                <span className="group-hover:animate-bounce inline-block">👋</span> Welcome to my portfolio
               </span>
             </div>
             
@@ -95,7 +95,7 @@ const Hero = () => {
               <RotatingText words={roles} />
             </div>
             
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed hover:text-primary transition-colors duration-300">
               Crafting intelligent solutions with modern web technologies and machine learning
             </p>
           </motion.div>
@@ -107,32 +107,46 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <button
-              onClick={scrollToAbout}
-              className="group bg-primary text-primary-foreground px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary/90 transition-all duration-300 flex items-center gap-3 hover:gap-4 shadow-lg hover:shadow-xl"
+              onClick={() => window.open('/src/assets/Roney.pdf', '_blank')}
+              className="group bg-primary text-primary-foreground px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary/90 transition-all duration-300 flex items-center gap-3 hover:gap-4 shadow-lg hover:shadow-xl hover:scale-105"
             >
-              View My Work
-              <ArrowDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
+              View My CV
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
             
-            <div className="flex items-center gap-4">
-              <a 
-                href="https://github.com" 
-                className="p-3 rounded-full bg-card border border-border hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
+            <div className="flex space-x-4">
+              <motion.a
+                href="https://github.com/Ron-10"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ 
+                  scale: 1.1,
+                  rotate: 5,
+                  backgroundColor: "hsl(var(--primary))",
+                  color: "hsl(var(--primary-foreground))"
+                }}
+                whileTap={{ scale: 0.9 }}
+                className="bg-card border border-border p-3 rounded-full hover:border-primary/50 transition-all duration-300 group"
               >
-                <Github className="w-5 h-5" />
-              </a>
-              <a 
-                href="https://linkedin.com" 
-                className="p-3 rounded-full bg-card border border-border hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
+                <Github className="w-6 h-6 text-foreground group-hover:text-primary-foreground transition-colors" />
+              </motion.a>
+              
+              <motion.a
+                href="https://www.linkedin.com/in/roney-karki-9b2002221/"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ 
+                  scale: 1.1,
+                  rotate: -5,
+                  backgroundColor: "hsl(var(--primary))",
+                  color: "hsl(var(--primary-foreground))"
+                }}
+                whileTap={{ scale: 0.9 }}
+                className="bg-card border border-border p-3 rounded-full hover:border-primary/50 transition-all duration-300 group"
               >
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a 
-                href="mailto:roneykarki011@gmail.com" 
-                className="p-3 rounded-full bg-card border border-border hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110"
-              >
-                <Mail className="w-5 h-5" />
-              </a>
+                <Linkedin className="w-6 h-6 text-foreground group-hover:text-primary-foreground transition-colors" />
+              </motion.a>
+
             </div>
           </motion.div>
         </motion.div>

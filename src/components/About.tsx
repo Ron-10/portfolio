@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Brain, Code, Database, Lightbulb } from 'lucide-react';
@@ -64,18 +63,18 @@ const About = () => {
               className="space-y-6"
             >
               <div className="prose prose-lg max-w-none text-muted-foreground">
-                <p className="text-lg leading-relaxed">
+                <p className="text-lg leading-relaxed hover:text-primary transition-colors duration-300">
                   I am a passionate and dedicated aspiring AI Engineer with a strong foundation in computer engineering 
                   and hands-on experience in web development, machine learning, and data analysis.
                 </p>
                 
-                <p className="text-lg leading-relaxed">
+                <p className="text-lg leading-relaxed hover:text-primary transition-colors duration-300">
                   As a freelance web developer and graphic designer, I've successfully delivered custom solutions that 
                   blend technical expertise with creative design. My experience as an instructor has honed my communication 
                   skills and ability to break down complex concepts.
                 </p>
                 
-                <p className="text-lg leading-relaxed">
+                <p className="text-lg leading-relaxed hover:text-primary transition-colors duration-300">
                   My career objective is to leverage my technical skills in AI and machine learning to contribute to 
                   innovative projects that make a meaningful impact on the world.
                 </p>
@@ -86,7 +85,7 @@ const About = () => {
                   {['Python', 'React', 'Machine Learning', 'Data Science', 'Web Development'].map((skill, index) => (
                     <span 
                       key={index}
-                      className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/20"
+                      className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/20 hover:bg-primary/20 hover:scale-105 transition-all duration-300 cursor-default"
                     >
                       {skill}
                     </span>

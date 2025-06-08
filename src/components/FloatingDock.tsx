@@ -89,14 +89,14 @@ const FloatingDock = () => {
       id: 'github',
       label: 'GitHub',
       icon: Github,
-      action: () => window.open('https://github.com', '_blank'),
+      action: () => window.open('https://github.com/Ron-10', '_blank'),
       isExternal: true
     },
     {
       id: 'linkedin',
       label: 'LinkedIn',
       icon: Linkedin,
-      action: () => window.open('https://linkedin.com', '_blank'),
+      action: () => window.open('https://www.linkedin.com/in/roney-karki-9b2002221/', '_blank'),
       isExternal: true
     }
   ];

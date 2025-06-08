@@ -125,21 +125,21 @@ const Projects = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-card border border-border rounded-xl p-6 hover:border-primary/50 transition-all duration-300 hover:shadow-lg"
+                className="bg-card border border-border rounded-xl p-6 hover:border-primary/50 transition-all duration-300 hover:shadow-lg group"
               >
                 <div className="mb-4">
-                  <span className="text-primary text-sm font-medium">{project.category}</span>
-                  <h3 className="text-xl font-semibold text-foreground mt-2 mb-3">
+                  <span className="text-primary text-sm font-medium group-hover:text-primary/80 transition-colors">{project.category}</span>
+                  <h3 className="text-xl font-semibold text-foreground mt-2 mb-3 group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-muted-foreground">{project.description}</p>
+                  <p className="text-muted-foreground group-hover:text-muted-foreground/90 transition-colors">{project.description}</p>
                 </div>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech, idx) => (
                     <span
                       key={idx}
-                      className="bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm"
+                      className="bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm hover:bg-primary/10 hover:text-primary transition-all duration-300"
                     >
                       {tech}
                     </span>

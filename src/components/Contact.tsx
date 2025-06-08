@@ -1,8 +1,23 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin } from 'lucide-react';
+import { Github, Linkedin, Mail, Instagram, Facebook } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import emailjs from '@emailjs/browser';
+
+// Custom X (formerly Twitter) icon component
+const XIcon = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 24 24"
+    className={className}
+    fill="currentColor"
+    stroke="currentColor"
+    strokeWidth="1.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -95,25 +110,83 @@ const Contact = () => {
               
               <div className="flex space-x-4">
                 <motion.a
-                  href="https://github.com/roneykarki"
+                  href="https://github.com/Ron-10"
                   target="_blank"
                   rel="noopener noreferrer"
-                  whileHover={{ scale: 1.1 }}
+                  whileHover={{ 
+                    scale: 1.1,
+                    rotate: 5,
+                    backgroundColor: "hsl(var(--primary))",
+                    color: "hsl(var(--primary-foreground))"
+                  }}
                   whileTap={{ scale: 0.9 }}
-                  className="bg-card border border-border p-3 rounded-full hover:border-primary/50 transition-colors"
+                  className="bg-card border border-border p-3 rounded-full hover:border-primary/50 transition-all duration-300 group"
                 >
-                  <Github className="w-6 h-6 text-foreground" />
+                  <Github className="w-6 h-6 text-foreground group-hover:text-primary-foreground transition-colors" />
                 </motion.a>
                 
                 <motion.a
-                  href="https://linkedin.com/in/roneykarki"
+                  href="https://www.linkedin.com/in/roney-karki-9b2002221/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  whileHover={{ scale: 1.1 }}
+                  whileHover={{ 
+                    scale: 1.1,
+                    rotate: -5,
+                    backgroundColor: "hsl(var(--primary))",
+                    color: "hsl(var(--primary-foreground))"
+                  }}
                   whileTap={{ scale: 0.9 }}
-                  className="bg-card border border-border p-3 rounded-full hover:border-primary/50 transition-colors"
+                  className="bg-card border border-border p-3 rounded-full hover:border-primary/50 transition-all duration-300 group"
                 >
-                  <Linkedin className="w-6 h-6 text-foreground" />
+                  <Linkedin className="w-6 h-6 text-foreground group-hover:text-primary-foreground transition-colors" />
+                </motion.a>
+
+                <motion.a
+                  href="https://www.instagram.com/i__am_ron/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ 
+                    scale: 1.1,
+                    rotate: 5,
+                    backgroundColor: "hsl(var(--primary))",
+                    color: "hsl(var(--primary-foreground))"
+                  }}
+                  whileTap={{ scale: 0.9 }}
+                  className="bg-card border border-border p-3 rounded-full hover:border-primary/50 transition-all duration-300 group"
+                >
+                  <Instagram className="w-6 h-6 text-foreground group-hover:text-primary-foreground transition-colors" />
+                </motion.a>
+
+                <motion.a
+                  href="https://facebook.com/profile.php?id=100011711830610"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ 
+                    scale: 1.1,
+                    rotate: -5,
+                    backgroundColor: "hsl(var(--primary))",
+                    color: "hsl(var(--primary-foreground))"
+                  }}
+                  whileTap={{ scale: 0.9 }}
+                  className="bg-card border border-border p-3 rounded-full hover:border-primary/50 transition-all duration-300 group"
+                >
+                  <Facebook className="w-6 h-6 text-foreground group-hover:text-primary-foreground transition-colors" />
+                </motion.a>
+
+                <motion.a
+                  href="https://x.com/i__am_ron"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ 
+                    scale: 1.1,
+                    rotate: 5,
+                    backgroundColor: "hsl(var(--primary))",
+                    color: "hsl(var(--primary-foreground))"
+                  }}
+                  whileTap={{ scale: 0.9 }}
+                  className="bg-card border border-border p-3 rounded-full hover:border-primary/50 transition-all duration-300 group"
+                >
+                  <XIcon className="w-6 h-6 text-foreground group-hover:text-primary-foreground transition-colors" />
                 </motion.a>
               </div>
             </motion.div>
