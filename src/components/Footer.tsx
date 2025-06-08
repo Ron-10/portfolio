@@ -14,7 +14,7 @@ const Footer = () => {
           className="text-center"
         >
           <p className="text-muted-foreground">
-            © 2024 Roney Karki. Built with React, Three.js, and ❤️
+            © 2025 Roney Karki. Built with React, Three.js, and ❤️.
           </p>
         </motion.div>
       </div>
