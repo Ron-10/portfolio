@@ -10,3 +10,5 @@
 
 # Set the correct MIME type for JavaScript modules
 AddType application/javascript .js
+
+
