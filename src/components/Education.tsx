@@ -20,30 +20,30 @@ const certificates = [
   {
     name: "Generative AI Mastermind",
     issuer: "Outskill",
-    verificationLink: "/src/assets/gen ai.pdf"
+    verificationLink: "/gen ai.pdf"
   },
   {
     name: "Prompt Engineering Professional",
     issuer: "IMTF",
     credentialId: "IMTF-PEP-2024-5678",
-    verificationLink: "/src/assets/prompteng.pdf"
+    verificationLink: "/prompteng.pdf"
   },
   {
     name: "5-Day ML Bootcamp",
     issuer: "Coding Ninjas",
     credentialId: "167836",
-    verificationLink: "/src/assets/ml.pdf"
+    verificationLink: "/ml.pdf"
   },
   {
     name: "MERN Stack Certification",
     issuer: "Himalaya College of Engineering",
-    verificationLink: "/src/assets/Roney.pdf"
+    verificationLink: "/Roney.pdf"
   },
   {
     name: "AWS Node Runners",
     issuer: "Binance Academy",
     credentialId: "726cbf3ca2efeb79a5e7b79287236680a8f458d7c83ad63ba181c4c1a4f654cc",
-    verificationLink: "/src/assets/aws.pdf"
+    verificationLink: "/aws.pdf"
   }
 ];
 

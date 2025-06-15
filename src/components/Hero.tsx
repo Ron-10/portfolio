@@ -107,7 +107,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <button
-              onClick={() => window.open('/src/assets/Roney.pdf', '_blank')}
+              onClick={() => window.open('/Roney.pdf', '_blank')}
               className="group bg-primary text-primary-foreground px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary/90 transition-all duration-300 flex items-center gap-3 hover:gap-4 shadow-lg hover:shadow-xl hover:scale-105"
             >
               View My CV

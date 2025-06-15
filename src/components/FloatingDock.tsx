@@ -82,7 +82,7 @@ const FloatingDock = () => {
       id: 'cv',
       label: 'View CV',
       icon: FileText,
-      action: () => window.open('/src/assets/Roney.pdf', '_blank'),
+      action: () => window.open('/Roney.pdf', '_blank'),
       isExternal: true
     },
     {
